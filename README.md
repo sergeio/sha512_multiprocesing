@@ -1,6 +1,7 @@
 SHA512 Multiprocessing
 ======================
 
+Find a sha512 hash starting with `n` hex zeroes, using multiple processes.
 
 This is a result of my having read this writeup on the [minimum viable block
 chain](http://www.igvita.com/2014/05/05/minimum-viable-block-chain/), and
@@ -13,6 +14,12 @@ Results
 I learned that daemonized subprocesses cannot spawn child processes of their
 own, and that threads in python block until they hit IO.
 
+### Usage ###
+
+```bash
+$ python sha512_zeroes.py
+Usage: python sha_512_zeroes.py num_zeroes num_processes
+```
 
 ### Example ###
 
